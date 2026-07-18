@@ -41,31 +41,24 @@ document.addEventListener("DOMContentLoaded", () => {
 const slider = document.getElementById("giftSlider");
 
 if (slider) {
+  let currentIndex = 0;
 
-  const scrollAmount = 500;
+  const cards = slider.querySelectorAll(".gift-card");
 
-  setInterval(() => {
+setInterval(() => {
 
-    if (
-      slider.scrollLeft + slider.clientWidth >=
-      slider.scrollWidth - 10
-    ) {
+    currentIndex++;
 
-      slider.scrollTo({
-        left: 0,
-        behavior: "smooth"
-      });
-
-    } else {
-
-      slider.scrollBy({
-        left: scrollAmount,
-        behavior: "smooth"
-      });
-
+    if(currentIndex > cards.length - 3){
+        currentIndex = 0;
     }
 
-  }, 2000);
+    slider.scrollTo({
+        left: cards[currentIndex].offsetLeft,
+        behavior: "smooth"
+    });
+
+},3000);
 
 }
 
