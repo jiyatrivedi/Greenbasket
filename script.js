@@ -41,25 +41,26 @@ document.addEventListener("DOMContentLoaded", () => {
 const slider = document.getElementById("giftSlider");
 
 if (slider) {
-  let currentIndex = 0;
 
-  const cards = slider.querySelectorAll(".gift-card");
+    const cards = slider.querySelectorAll(".gift-card");
+    let currentIndex = 0;
 
-setInterval(() => {
+    function slideCards() {
 
-    currentIndex++;
+        currentIndex++;
 
-    if(currentIndex > cards.length - 3){
-        currentIndex = 0;
+        if (currentIndex >= cards.length) {
+            currentIndex = 0;
+        }
+
+        slider.scrollTo({
+            left: cards[currentIndex].offsetLeft,
+            behavior: "smooth"
+        });
+
     }
 
-    slider.scrollTo({
-        left: cards[currentIndex].offsetLeft,
-        behavior: "smooth"
-    });
-
-},3000);
-
+    setInterval(slideCards, 3000);
 }
 
 //Search Place Holder
