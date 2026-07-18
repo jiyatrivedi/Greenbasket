@@ -225,6 +225,7 @@ header {
   gap: 20px;
   overflow-x: auto;
   scroll-behavior: smooth;
+  scroll-snap-type:x mandatory;
   scrollbar-width: none;
 }
 
@@ -233,9 +234,10 @@ header {
 }
 
 .gift-card{
-  flex: 0 0 calc(33.33% - 14px);
-  border-radius: 5px;
-  overflow: hidden;
+  flex:0 0 calc((100% - 40px) / 3);
+  border-radius:5px;
+  overflow:hidden;
+  scroll-snap-align:start;
 }
 
 .gift-card img{
