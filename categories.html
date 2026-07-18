@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Categories-GreenBasket</title>
+
+  <!--Links -->
+  <link rel="stylesheet" href="categories.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+  <!-- Header -->
+   <header class="header">
+
+    <div class="logo">
+      <img src="images/logo.png" alt="logo">
+    </div> 
+
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search for products...">
+      <button>
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </div>
+
+    <div class="header-right">
+      <!-- Wishlist Icon -->
+      <a href="wishlist.html" class="wishlist-link">
+      <i class="fa-solid fa-heart"></i>
+      </a>
+      <div class="cart-wrapper" onclick="window.location.href='cart.html'">
+        <img src="icons/cart.png" class="cart-icon">
+        <span class="cart-count">0</span>
+      </div>
+      <button class="login-btn">Login</button>
+    </div>
+
+  </header>
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+
+  <div class="breadcrumb-left">
+
+    <div class="menu-btn" onclick="openSidebar()">
+      <span>☰</span>
+      <span>Menu</span>
+    </div>
+
+    <span>Home</span>
+    <span>&gt;</span>
+    <span id="current-cat">Vegetables</span>
+
+  </div>
+
+</div>
+
+ 
+<!-- Overlay -->
+<div class="overlay" onclick="closeSidebar()"></div>
+
+<!-- Sidebar Menu-->
+<aside class="sidebar mobile-sidebar">
+
+  <div class="close-btn" onclick="closeSidebar()">✕</div>
+
+  <h3>Categories</h3>
+
+   <ul class="categories">
+    <li onclick="changeCategory(this)">Vegetables</li>
+    <li onclick="changeCategory(this)">Fruits</li>
+    <li onclick="changeCategory(this)">Dairy & Eggs</li>
+    <li onclick="changeCategory(this)">Cold drinks & juices</li>
+    <li onclick="changeCategory(this)">Snacks</li>
+    <li onclick="changeCategory(this)">Personal Care</li>
+  </ul>
+
+</aside>
+
+  <!-- Products-->
+
+    <div class="products-section">
+
+      <div class="top-bar">
+
+        <h2 id="category-title">Vegetables</h2>
+
+        <div class="top-actions">
+
+          <div>
+            Sort by :
+            <select>
+              <option>Popular</option>
+              <option>Newest</option>
+              <option>Price Low</option>
+              <option>Price High</option>
+            </select>
+          </div>
+
+          <div>
+            Show :
+            <select>
+              <option>12</option>
+              <option>24</option>
+            </select>
+        </div>
+      </div>
+    </div>
+
+<!-- Product Grid-->
+
+<div class="product-grid"></div>
+
+<!-- LOGIN MODAL -->
+
+<div class="login-modal">
+
+  <div class="login-card">
+
+    <span class="close-login">&times;</span>
+
+    <!-- Logo -->
+    <img src="images/logo.png" alt="GreenBasket Logo" class="login-logo">
+
+    <h2>Welcome Back</h2>
+
+    <p>Login to continue shopping</p>
+
+    <input type="tel" id="mobileNumber" placeholder="Enter Mobile Number">
+
+    <button id="continueBtn">Continue</button>
+
+  </div>
+
+</div>
+
+<script src="product.js"></script>
+<script src="categories.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

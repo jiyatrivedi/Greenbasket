@@ -1,0 +1,108 @@
+body{
+  margin:0;
+  background:#f6fbf3;
+  font-family:Arial,sans-serif;
+}
+
+.success-container{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:80vh;
+  padding:20px;
+}
+
+.success-card{
+  background:#fff;
+  width:500px;
+  max-width:100%;
+  padding:40px;
+  border-radius:16px;
+  text-align:center;
+  box-shadow:0 4px 20px rgba(0,0,0,.08);
+}
+
+.success-icon{
+  width:90px;
+  height:90px;
+  margin:0 auto 20px;
+  border-radius:50%;
+  background:#2e7d32;
+  color:#fff;
+  font-size:50px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.success-card h1{
+  color:#2e7d32;
+  margin-bottom:15px;
+}
+
+.order-id{
+  font-weight:600;
+  margin:20px 0;
+}
+
+.message{
+  color:#666;
+  margin-bottom:25px;
+}
+
+.shop-btn{
+  display:inline-block;
+  padding:14px 28px;
+  background:#2e7d32;
+  color:#fff;
+  text-decoration:none;
+  border-radius:8px;
+  font-weight:600;
+  transition:.3s;
+}
+
+.shop-btn:hover{
+  background:#1b5e20;
+}
+
+/*Mobile Responsice Design */
+@media (max-width: 768px){
+
+  .success-container{
+    min-height: 100vh;
+    padding: 15px;
+  }
+
+  .success-card{
+    width: 100%;
+    padding: 30px 20px;
+    border-radius: 12px;
+  }
+
+  .success-icon{
+    width: 70px;
+    height: 70px;
+    font-size: 38px;
+    margin-bottom: 15px;
+  }
+
+  .success-card h1{
+    font-size: 24px;
+  }
+
+  .order-id{
+    font-size: 15px;
+  }
+
+  .message{
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .shop-btn{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    font-size: 15px;
+  }
+}

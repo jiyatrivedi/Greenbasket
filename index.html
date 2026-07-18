@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home-GreenBasket</title>
+<!--Link-->
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+
+  <!-- Top Navbar -->
+  <div class="top-nav">
+    <div class="logo">
+      <img src="images/logo.png" alt="logo">
+    </div>
+
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search for products...">
+      <button id="searchBtn">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+       <div id="searchResults" class="search-results"></div>
+    </div>
+
+  <div class="nav-right">
+      
+      <!--Wishlist Page Icon-->
+      <a href="wishlist.html" class="wishlist-link">
+      <i class="fa-solid fa-heart"></i>
+      <span>Wishlist</span>
+      </a>
+
+      <div class="cart-wrapper" onclick="window.location.href='cart.html'">
+   
+          <img src="icons/cart.png" class="cart-icon">
+          <span class="cart-count">0</span>
+        
+        <span class="cart-text">Cart</span>
+      </div>
+      <button class="login-btn">Login</button>
+    </div>
+
+  </div>
+
+  <!-- Bottom Navbar -->
+  <div class="menu-nav">
+    <a href="index.html">Home</a>
+    <a href="categories.html">Categories</a>
+    <a href="cart.html">Cart</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+</header>
+
+<!-- Home Image Section -->
+<section class="home-image">
+  <img src="images/home.png" alt="Home Image">
+</section>
+
+<!--Gift Card Section-->
+<section class="gift-slider-section">
+  
+ <div class="gift-slider" id="giftSlider">
+
+        <div class="gift-card">
+            <img src="images/card1.png" alt="veg-card">
+        </div>
+
+        <div class="gift-card">
+            <img src="images/card2.png" alt="dairy-card">
+        </div>
+
+        <div class="gift-card">
+            <img src="images/card3.png" alt="colddrink-card">
+        </div>
+
+        <div class="gift-card">
+            <img src="images/card4.png" alt="snacks-card">
+        </div>
+
+        <div class="gift-card">
+            <img src="images/card5.png" alt="personalcare-card">
+        </div>
+
+  </div>
+
+  
+</section>
+
+<!-- Features section -->
+<section class="features">
+
+<div class="feature-box">
+     <img src="icons/truck.png" class="icon" alt="truck-icon">
+    <div>
+        <h4>Free Delivery</h4>
+        <p>On orders above ₹499</p>
+    </div>
+</div>
+
+<div class="feature-box">
+    <img src="icons/clock.png" class="icon" alt="clock-icon">
+    <div>
+        <h4>30 Min Delivery</h4>
+        <p>Super fast delivery</p>
+    </div>
+</div>
+
+<div class="feature-box">
+    <img src="icons/quality.png" class="icon" alt="quality-icon">
+    <div>
+        <h4>Best Quality</h4>
+        <p>Fresh & Organic</p>
+    </div>
+</div>
+
+<div class="feature-box">
+    <img src="icons/payment.png" class="icon" alt="payment-icon">
+    <div>
+        <h4>Safe Payment</h4>
+        <p>100% secure payment</p>
+    </div>
+</div>
+
+</section>
+
+<!-- Categories Section -->
+<section class="categories">
+  <div class="categories-header">
+    <h2>Shop by Category</h2>
+    <a href="categories.html" class="view-all">View All</a>
+  </div>
+
+  <div class="category-grid">
+
+  <a href="categories.html?category=Fruits" class="cat-card">
+    <img src="images/fruits.png">
+    <p>Fruits</p>
+  </a>
+
+  <a href="categories.html?category=Vegetables" class="cat-card">
+    <img src="images/vegetables.png">
+    <p>Vegetables</p>
+  </a>
+
+  <a href="categories.html?category=Dairy%20%26%20Eggs" class="cat-card">
+    <img src="images/dairy.png">
+    <p>Dairy & Eggs</p>
+  </a>
+
+  <a href="categories.html?category=Cold%20drinks%20%26%20juices" class="cat-card">
+    <img src="images/colddrinks.png">
+    <p>Cold drinks & juices</p>
+  </a>
+
+  <a href="categories.html?category=Snacks" class="cat-card">
+    <img src="images/snacks.png">
+    <p>Snacks</p>
+  </a>
+
+  <a href="categories.html?category=Personal%20Care" class="cat-card">
+    <img src="images/personal-care.png">
+    <p>Personal Care</p>
+  </a>
+
+</div>
+</section>
+
+<!-- Product Section -->
+
+<section class="popular-products">
+<div class="container">
+    <div class="section-header">
+      <h2>Popular Products</h2>
+      <a href="categories.html" class="view-all">View All</a>
+    </div>
+
+<div class="product-grid">
+
+  <!--Apple -->
+  <div class="product-card">
+      <button class="wishlist-icon" data-id="16"><i class="fa-solid fa-heart"></i></button>
+      <img src="products/fruits/apples.png" alt="Product 1">
+      <h3>Apples</h3>
+    <!-- Price -->
+    <div class="price-box">
+      <span class="new-price">₹120</span>
+      <span class="old-price">₹150</span>
+    </div>
+    <!-- Rating -->
+    <div class="rating">
+      <i class="fa-solid fa-star"></i>
+      <span>4.6 (128)</span>
+    </div>
+    <!-- Button -->
+    <button class="add-btn" data-id="16">Add<i class="fa-solid fa-plus"></i></button>
+  </div>
+
+  <!-- Fresh milk -->
+  <div class="product-card">
+      <button class="wishlist-icon" data-id="31"><i class="fa-solid fa-heart"></i></button>
+      <img src="products/dairy/milk.png" alt="Product 2">
+      <h3>Milk</h3>
+    <!-- Price -->
+    <div class="price-box">
+      <span class="new-price">₹60</span>
+      <span class="old-price">₹70</span>
+    </div>  
+    <!-- Rating -->
+    <div class="rating">
+      <i class="fa-solid fa-star"></i>
+      <span>4.8 (98)</span>
+    </div>
+    <!-- Button -->
+    <button class="add-btn" data-id="31">Add<i class="fa-solid fa-plus"></i></button>
+  </div>
+  
+  <!-- Premium tea -->
+  <div class="product-card">
+      <button class="wishlist-icon" data-id="56"><i class="fa-solid fa-heart"></i></button>
+      <img src="products/colddrinks/tea.png" alt="Product 3">
+      <h3>Premium Tea</h3>
+    <!-- Price -->
+    <div class="price-box">
+      <span class="new-price">₹180</span>
+      <span class="old-price">₹225</span>
+    </div>
+    <!-- Rating -->
+    <div class="rating">
+      <i class="fa-solid fa-star"></i>
+      <span>4.7 (84)</span>
+    </div>
+    <!-- Button -->
+    <button class="add-btn" data-id="56">Add<i class="fa-solid fa-plus"></i></button>
+  </div>
+
+  <!--Cold Drink-->
+  <div class="product-card">
+      <button class="wishlist-icon" data-id="46"><i class="fa-solid fa-heart"></i></button>
+      <img src="products/colddrinks/cocacola.png" alt="Product 4">
+      <h3>Coca-Cola</h3>
+    <!-- Price -->
+    <div class="price-box">
+      <span class="new-price">₹40</span>
+      <span class="old-price">₹45</span>
+    </div>
+    <!-- Rating -->
+    <div class="rating">
+      <i class="fa-solid fa-star"></i>
+      <span>4.5</span>
+    </div>
+    <!-- Button -->
+    <button class="add-btn" data-id="46">Add<i class="fa-solid fa-plus"></i></button>
+  </div>
+
+  <!-- Noodles -->    
+  <div class="product-card">
+      <button class="wishlist-icon" data-id="67"><i class="fa-solid fa-heart"></i></button>
+      <img src="products/snacks/noodles.png" alt="Product 5">
+      <h3>Hakka Noodles</h3>
+      <!-- Price -->
+      <div class="price-box">
+        <span class="new-price">₹70</span>
+        <span class="old-price">₹85</span>
+      </div>
+      <!-- Rating -->
+      <div class="rating">
+        <i class="fa-solid fa-star"></i>
+        <span>4.4</span>
+      </div>
+      <!-- Button -->
+      <button class="add-btn" data-id="67">Add<i class="fa-solid fa-plus"></i></button>
+  </div>
+  
+  <!-- Choco Fills -->
+  <div class="product-card">
+      <button class="wishlist-icon" data-id="68"><i class="fa-solid fa-heart"></i></button>
+      <img src="products/snacks/chocofills.png" alt="Product 6">
+      <h3>Dark Fantasy Choco Fills</h3>
+      <!--Price-->
+      <div class="price-box">
+        <span class="new-price">₹35</span>
+        <span class="old-price">₹40</span>
+      </div>
+      <!-- Rating -->
+      <div class="rating">
+        <i class="fa-solid fa-star"></i>
+        <span>4.8</span>
+      </div>
+      <!-- Button -->
+      <button class="add-btn" data-id="68">Add<i class="fa-solid fa-plus"></i></button>
+  </div>
+      
+  <!-- Bananas -->
+  <div class="product-card">
+      <button class="wishlist-icon" data-id="17"><i class="fa-solid fa-heart"></i></button>
+      <img src="products/fruits/banana.png" alt="Product 7">
+      <h3>Bananas</h3>
+      <!-- Price -->
+      <div class="price-box">
+        <span class="new-price">₹60</span>
+        <span class="old-price">₹70</span>
+      </div>
+      <!-- Rating -->
+      <div class="rating">
+        <i class="fa-solid fa-star"></i>
+        <span>4.7</span>
+      </div>
+      <!-- Button -->
+      <button class="add-btn" data-id="17">Add<i class="fa-solid fa-plus"></i></button>
+  </div>
+  
+  <!-- Curd (Fresh Dahi) -->
+  <div class="product-card">
+      <button class="wishlist-icon" data-id="33"><i class="fa-solid fa-heart"></i></button>
+      <img src="products/dairy/curd.png" alt="Product 8">
+      <h3>Amul Curd (Fresh Dahi)</h3>
+      <!-- Price -->
+      <div class="price-box">
+        <span class="new-price">₹80</span>
+        <span class="old-price">₹95</span>
+      </div>
+      <!-- Rating -->
+      <div class="rating">
+        <i class="fa-solid fa-star"></i>
+        <span>4.6</span>
+      </div>
+      <!-- Button -->
+      <button class="add-btn" data-id="33">Add<i class="fa-solid fa-plus"></i></button>
+  </div>
+
+  <!-- Fresh Potato -->
+  <div class="product-card">
+      <button class="wishlist-icon"  data-id="2"><i class="fa-solid fa-heart"></i></button>
+      <img src="products/vegetables/potato.png" alt="Product 9">
+      <h3>Fresh Potatoes</h3>
+      <!-- Price -->
+      <div class="price-box">
+        <span class="new-price">₹80</span>
+        <span class="old-price">₹95</span>
+      </div>
+      <!-- Rating -->
+      <div class="rating">
+        <i class="fa-solid fa-star"></i>
+        <span>4.6</span>
+      </div>
+      <!-- Button -->
+      <button class="add-btn" data-id="2">Add<i class="fa-solid fa-plus"></i></button>
+  </div>
+  
+  <!-- Pligrim Shampoo -->
+  <div class="product-card">
+      <button class="wishlist-icon" data-id="69"><i class="fa-solid fa-heart"></i></button>
+      <img src="products/personal-care/pligrim-shampoo.png" alt="Product 10">
+      <h3>Pilgrim Shampoo</h3>
+      <!-- Price -->
+      <div class="price-box">
+        <span class="new-price">₹301</span>
+        <span class="old-price">₹399</span>
+      </div>
+      <!-- Rating -->
+      <div class="rating">
+        <i class="fa-solid fa-star"></i>
+        <span>4.8</span>
+      </div>
+      <!-- button -->
+      <button class="add-btn" data-id="69">Add<i class="fa-solid fa-plus"></i></button>
+  </div>
+  
+</div>
+</div>
+</section>
+
+<!-- Promo Features -->
+<section class="promo-section">
+
+  <div class="promo-card">
+    <div class="promo-text">
+      <h3>10 Minute Delivery</h3>
+      <p>Get your order in 10 minutes</p>
+      <a href="#">Order Now →</a>
+    </div>
+    <img src="images/delivery-boy.png" alt="promo-card1">
+  </div>
+
+  <div class="promo-card">
+    <div class="promo-text">
+      <h3>Best Offers</h3>
+      <p>Best prices & exciting offers</p>
+      <a href="#">Shop Now →</a>
+    </div>
+    <img src="images/offer.png" alt="promo-card2">
+  </div>
+
+  <div class="promo-card">
+    <div class="promo-text">
+      <h3>Combo Store</h3>
+      <p>Best combos at lowest prices</p>
+      <a href="#">Explore →</a>
+    </div>
+    <img src="images/combo.png" alt="promo-card3">
+  </div>
+
+  <div class="promo-card">
+    <div class="promo-text">
+      <h3>Bulk Orders</h3>
+      <p>Save more on bulk shopping</p>
+      <a href="#">Order Now →</a>
+    </div>
+    <img src="images/box.png" alt="promo-card4">
+  </div>
+
+</section>
+
+<!-- Top Brands -->
+<section class="top-brands">
+
+  <div class="brands-header">
+    <h2>Top Brands</h2>
+  </div>
+
+  <div class="brands-grid">
+
+    <div class="brand-card">
+      <img src="images/amul-logo.png">
+    </div>
+
+    <div class="brand-card">
+      <img src="images/lays-logo.png">
+    </div>
+
+    <div class="brand-card">
+      <img src="images/dove-logo.png">
+    </div>
+
+    <div class="brand-card">
+      <img src="images/cocacola-logo.png">
+    </div>
+
+    <div class="brand-card">
+      <img src="images/maggie-logo.png">
+    </div>
+
+    <div class="brand-card">
+      <img src="images/parle-logo.png">
+    </div>
+
+  </div>
+</section>
+
+<!-- Login page -->
+
+<div class="login-modal">
+
+  <div class="login-card">
+
+    <span class="close-login">&times;</span>
+
+    <!-- LOGO -->
+    <img src="images/logo.png" alt="logobutton" class="login-logo">
+
+    <h2>Welcome Back</h2>
+
+    <p>Login to continue shopping</p>
+
+    <input type="tel" id="mobileNumber" placeholder="Enter Mobile Number">
+
+    <button id="continueBtn">Continue</button>
+
+  </div>
+
+</div>
+
+<!-- Footer Section -->
+
+<footer class="footer">
+
+  <div class="footer-content">
+
+    <!-- Logo Section -->
+    <div class="footer-box">
+
+      <img src="images/logo.png" alt="GreenBasket Logo" class="footer-logo">
+
+      <p>
+        Fresh groceries delivered to your doorstep within minutes.
+      </p>
+
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-box">
+
+      <h4>Quick Links</h4>
+
+      <a href="index.html">Home</a>
+      <a href="categories.html">Shop</a>
+      <a href="cart.html">Cart</a>
+      <a href="checkout.html">Checkout</a>
+
+    </div>
+
+    <!-- Categories -->
+    <div class="footer-box">
+
+      <h4>Categories</h4>
+
+      <a href="categories.html?category=Fruits">Fruits</a>
+      <a href="categories.html?category=Vegetables">Vegetables</a>
+      <a href="categories.html?category=Dairy%20%26%20Eggs">Dairy & Eggs</a>
+      <a href="categories.html?category=Cold%20drinks%20%26%20juices">Cold Drinks & Juices</a>
+      <a href="categories.html?category=Snacks">Snacks</a>
+      <a href="categories.html?category=Personal%20Care">Personal Care</a>
+
+    </div>
+
+  <!-- Contact -->
+  <div class="footer-box" id="contact">
+
+      <h4>Contact</h4>
+
+      <p>
+        <i class="fas fa-location-dot"></i>
+        Ahmedabad, India
+      </p>
+
+      <p>
+        <i class="fas fa-phone"></i>
+        +91 99999 99999
+      </p>
+
+      <p>
+        <i class="fas fa-envelope"></i>
+        support@greenbasket.com
+      </p>
+
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+
+    <p>© 2026 GreenBasket. All Rights Reserved.</p>
+
+    <p class="author">
+      Created by <strong>Jiya Trivedi</strong>
+    </p>
+
+  </div>
+
+</footer>
+
+
+<script src="script.js" defer></script>
+<script src="product.js" defer></script>
+
+</body>
+</html>

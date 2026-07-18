@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cart-GreenBasket</title>
+
+<!--Links-->
+<link rel="stylesheet" href="categories.css">
+<link rel="stylesheet" href="cart.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<header class="header">
+
+    <div class="logo">
+    <img src="images/logo.png" alt="GreenBasket Logo">
+    </div>
+
+  <div class="header-right">
+
+    <div class="cart-wrapper">
+    <img src="icons/cart.png" class="cart-icon" alt="Cart">
+    <span class="cart-count">0</span>
+    </div>
+
+    <button class="login-btn">Login</button>
+
+  </div>
+
+</header>
+
+<div class="cart-page">
+
+<div class="cart-left">
+
+  <h2>Your Cart (<span id="itemCount">0</span> items)</h2>
+
+<div class="cart-table">
+
+  <div class="table-head">
+  <div>Product</div>
+  <div>Price</div>
+  <div>Quantity</div>
+  <div>Total</div>
+
+</div>
+
+  <div id="cartItems"></div>
+
+</div>
+
+<a href="categories.html" class="continue-btn">
+← Continue Shopping
+</a>
+
+</div>
+
+<div class="summary-box">
+
+  <h3>Order Summary</h3>
+
+  <div class="summary-row">
+  <span>Subtotal</span>
+  <span id="subtotal">₹0</span>
+  </div>
+
+  <div class="summary-row">
+  <span>Delivery Fee</span>
+  <span id="deliveryFee">₹20</span>
+  </div>
+
+  <div class="summary-row">
+  <span>Discount</span>
+  <span id="discount">- ₹15</span>
+  </div>
+
+<hr>
+
+  <div class="summary-row total">
+  <span>Total</span>
+  <span id="grandTotal">₹0</span>
+  </div>
+
+  <button class="checkout-btn"
+  onclick="window.location.href='checkout.html'">
+  Proceed to Checkout
+  </button>
+
+  <p class="save-text">You saved ₹15 on this order</p>
+
+</div>
+
+</div>
+
+<!-- LOGIN MODAL -->
+
+<div class="login-modal">
+
+  <div class="login-card">
+
+    <span class="close-login">&times;</span>
+
+    <img src="images/logo.png" alt="GreenBasket Logo" class="login-logo">
+
+    <h2>Welcome Back</h2>
+
+    <p>Login to continue shopping</p>
+
+    <input type="tel" id="mobileNumber" placeholder="Enter Mobile Number">
+
+    <button id="continueBtn">Continue</button>
+    
+  </div>
+
+</div>
+
+<script src="cart.js"></script>
+<script src="script.js"></script>
+
+<div id="toast"></div>
+
+</body>
+</html>
