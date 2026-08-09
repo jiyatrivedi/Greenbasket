@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout-Greenbasket</title>
+
+<!--Links-->
+<link rel="stylesheet" href="categories.css">
+<link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+
+<header class="header">
+
+  <div class="logo">
+    <img src="images/logo.png" alt="GreenBasket Logo">
+  </div>
+
+  <div class="header-right">
+
+    <a href="cart.html"><img src="icons/cart.png" class="cart-icon" alt="Cart"></a>
+  
+  </div>
+
+</header>
+
+<div class="checkout-container">
+
+  <h2>Checkout</h2>
+
+  <div class="checkout-grid">
+
+    <div class="address-box">
+
+      <h3>Delivery Address</h3>
+
+      <input type="text" id="name" placeholder="Full Name" required>
+
+      <input type="tel" id="mobile" placeholder="Mobile Number" required>
+
+      <textarea id="address" placeholder="Full Address" required></textarea>
+
+      <input type="text" id="city" placeholder="City" required>
+
+      <input type="text" id="pincode" placeholder="Pincode" required>
+
+    </div>
+
+    <div class="payment-box">
+
+      <h3>Payment Method</h3>
+     
+      <label class="payment-option">
+        <input type="radio" name="payment" checked>
+        <span>UPI Payment</span>
+      </label>
+
+      <label class="payment-option">
+       <input type="radio" name="payment">
+       <span>Credit / Debit Card</span>
+      </label>
+
+      <label class="payment-option">
+       <input type="radio" name="payment">
+       <span>Cash On Delivery</span>
+      </label>
+
+    </div>
+
+  </div>
+
+  <div class="payment-footer">
+
+    <div class="total-box">
+      Total Payment :
+      <span id="grandTotal">₹0</span>
+    </div>
+
+   <button class="place-order-btn" onclick="placeOrder()">Place Order</button>  
+
+  </div>
+
+</div>
+
+<script src="checkout.js"></script>
+
+</body>
+</html>

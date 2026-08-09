@@ -1,0 +1,111 @@
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f5f5f5;
+}
+
+/* Container */
+
+.orders-container{
+    max-width:1000px;
+    margin:40px auto;
+    padding:20px;
+}
+
+/* Header */
+.page-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.page-header h1{
+    margin:0;
+    color:#2e7d32;
+    font-size:42px;
+    font-family:"PT Serif", serif;
+}
+
+.back-btn{
+    text-decoration:none;
+    background:#2e7d32;
+    color:white;
+    padding:12px 18px;
+    border-radius:8px;
+    font-weight:600;
+}
+
+/* Empty Orders Card */
+
+.empty-orders{
+    background:white;
+    border-radius:18px;
+    padding:60px 30px;
+    text-align:center;
+
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+.empty-orders i{
+    font-size:80px;
+    color:#2e7d32;
+    margin-bottom:20px;
+}
+
+.empty-orders h2{
+    font-size:30px;
+    margin-bottom:10px;
+    color:#222;
+}
+
+.empty-orders p{
+    color:#666;
+    font-size:16px;
+    margin-bottom:25px;
+}
+
+.shop-btn{
+    display:inline-block;
+    text-decoration:none;
+    background:#2e7d32;
+    color:white;
+    padding:14px 24px;
+    border-radius:10px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.shop-btn:hover{
+    background:#1b5e20;
+}
+
+/* Mobile Responsive Design */
+
+@media(max-width:768px){
+
+    .orders-container{
+        padding:15px;
+    }
+
+    .page-header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .page-header h1{
+        font-size:32px;
+    }
+
+    .empty-orders{
+        padding:40px 20px;
+    }
+
+    .empty-orders i{
+        font-size:60px;
+    }
+
+    .empty-orders h2{
+        font-size:24px;
+    }
+}

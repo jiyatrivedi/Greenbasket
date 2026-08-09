@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Account-GreenBasket</title>
+
+<!--Links-->
+<link rel="stylesheet" href="account.css">
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+<div class="account-container">
+
+    <!-- Profile Card -->
+
+    <div class="profile-card">
+
+        <div class="profile-image">
+            <i class="fa-solid fa-user"></i>
+        </div>
+
+        <h1>My Account</h1>
+
+        <h3 id="userMobile"></h3>
+
+        <p>GreenBasket Customer</p>  
+
+        <button class="edit-btn" onclick="editProfile()">Edit Profile</button>
+
+    </div>
+
+    <!-- Menu Cards -->
+
+    <div class="account-grid">
+
+        <a href="orders.html" class="account-card">
+            <i class="fa-solid fa-box"></i>
+            <h4>My Orders</h4>
+            <p>Track previous orders</p>
+        </a>
+
+        <a href="wishlist.html" class="account-card">
+            <i class="fa-solid fa-heart"></i>
+            <h4>Wishlist</h4>
+            <p>Your saved products</p>
+        </a>
+
+        <a href="cart.html" class="account-card">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <h4>My Cart</h4>
+            <p>View cart items</p>
+        </a>
+
+        <div class="account-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <h4>Address</h4>
+            <p id="userAddress">Not added</p>
+            <button onclick="toggleAddressForm()">Edit Address</button>
+
+            <div id="addressBox">
+            <input type="text" id="addressInput" placeholder="Enter your address">
+            <button onclick="saveAddress()">Save</button>
+            </div>
+        </div>
+    
+    </div>
+
+    <button id="logoutBtn" class="logout-btn">Logout</button>
+
+</div>
+<script src="account.js"></script>
+
+</body>
+</html>
