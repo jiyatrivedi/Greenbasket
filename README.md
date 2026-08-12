@@ -53,7 +53,7 @@ GreenBasket/
 ├── images/
 ├── icons/
 ├── products/
-├── screenshots/
+├── Screenshots/
 │
 ├── index.html
 ├── categories.html
